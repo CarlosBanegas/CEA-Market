@@ -12,8 +12,100 @@
     tools:context="com.example.carlo.cea_market.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="#ec7777">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="CEA-Market"
+                android:id="@+id/textView"
+                android:textAlignment="center"
+                android:textColor="#34e4b8"
+                android:textStyle="bold"
+                android:textSize="50dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de Usuario"
+                android:id="@+id/textView2"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="45dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:textSize="25dp"
+                android:background="#f5cbcb"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contraseña"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/editText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="43dp"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:background="#f7b5b5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entrar"
+                android:id="@+id/bEntrar"
+                android:layout_alignParentBottom="true"
+                android:layout_alignEnd="@+id/editText2"
+                android:onClick="onClickEntrar" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrarse"
+                android:id="@+id/bRegistrarse"
+                android:layout_alignBottom="@+id/bEntrar"
+                android:layout_alignStart="@+id/editText2"
+                android:onClick="onClickRegistrarse" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 </RelativeLayout>
